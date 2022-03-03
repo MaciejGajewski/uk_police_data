@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  run-etl:
+    build: .
+    command: bash -c "python main_etl.py && python main_services.py"
+    volumes:
+      - .:/opt/application/
